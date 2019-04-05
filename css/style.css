@@ -68,7 +68,6 @@ a:hover {
 }
 
 .buttoncalc {
-
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -89,10 +88,9 @@ a:hover {
   font: normal normal bold 11px verdana;
   color: #ffffff;
   text-decoration: none;
-  text-transform: uppercase
-  
-  
+  text-transform: uppercase;
 }
+
 .button:hover {
   border: 1px solid ##2953e3;
   background: #4fa0ff;
@@ -103,6 +101,7 @@ a:hover {
   text-decoration: none;
   text-transform: uppercase
 }
+
 .button:active {
   background: #2347c1;
   background: -webkit-gradient(linear, left top, left bottom, from(#2347c1), to(#2347c1));
@@ -110,6 +109,7 @@ a:hover {
   background: linear-gradient(to bottom, #2347c1, #2347c1);
   text-transform: uppercase
 }
+
 .button:focus {
   text-transform: uppercase
 }
