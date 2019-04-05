@@ -1,0 +1,68 @@
+body {
+  margin-top: 100px;
+  background-color: maroon;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+}
+/* .jumbotron {
+} */
+
+button {
+  float: right;
+}
+i {
+  float: left;
+  font-size: 35px;
+  margin-right: 5px;
+  color: maroon;
+}
+
+.fa-quote-left {
+  font-size: 25px;
+  color: black;
+}
+
+.btn.btn-default {
+  height: 35px;
+  background-color: maroon;
+  color: white;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+  border: 0;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.quote {
+  font-size: 3em;
+}
+
+.icons {
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+}
+
+.quote-box {
+  background-color: white;
+}
