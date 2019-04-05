@@ -1,75 +1,44 @@
-let user;
-let computer;
+// *******Create functions**********
 
-$('.choice').click(function() {
-   user = this.id;
-   computer = Math.random();
+function generateQuote() {
+  $.ajaxSetup({ cache: false });
+  $.getJSON(
+    "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=",
+    function(json) {
+      $("#content").html(json[0].content);
+      $("#title").html(json[0].title);
+      var fullQuote = "\"" + json[0].content + "\"    --- " + json[0].title;
+      var fullQuoteText = fullQuote.replace(/<\/{0,1}[a-z]+>/gi, "");
+      $("#twitter-link").attr("href", "https://twitter.com/intent/tweet?text=" + encodeURIComponent(fullQuoteText));
+    }
+  );
+  changeColors();
+}
 
-   if (computer <= 1/3) {
-     computer = "rock";
-   } else if (computer < 2/3) {
-     computer = "scissors";
-   } else {
-     computer = "paper";
-   }
-  const winner=compare(user,computer);
-  console.log(winner);
-  $("h1").html(winner.str);
-  $('.choice').css("box-shadow", "none");
-  if (winner.ner == "tie") {
-  	$(this).css("box-shadow", "0px 0px 25px 10px #F2E8C4");
-  } else if (winner.ner == "win") {
-  	$(this).css("box-shadow", "0px 0px 25px 10px #3EC9A7");
-  } else {
-  	$(this).css("box-shadow", "0px 0px 25px 10px #E32B09");
-  }
+function changeColors() {
+  var colors = [
+    "#e6194b",
+    "#3cb44b",
+    "#0082c8",
+    "#f58231",
+    "#911eb4",
+    "#f032e6",
+    "#008080",
+    "#aa6e28",
+    "#800000",
+    "#808000",
+    "#000080",
+    "#000000"
+  ];
+  var findIndex = Math.floor(Math.random() * colors.length);
+  var colorToChange = colors[findIndex];
+  $("body, .btn").css("background-color", colorToChange);
+  $(".icons").css("color", colorToChange);
+}
 
+// ***** Run code after page loads ******
+
+$(document).ready(function() {
+  generateQuote();
+  $("#get-quote").on("click", generateQuote);
 });
-
-let compare = (user, computer) => {
-	const obj = {
-		str: "",
-		ner: ""
-	};
-	const rock = "Rock crushes scissors.";
-	const paper = "Paper covers rock.";
-	const scissors = "Scissors cut paper.";
-	const win = "You win!";
-	const lose = "You lose...";
-  if (user === computer) {
-  	obj.str = "The result is a tie.";
-  	obj.ner = "tie";
-  } 
-  else if (user === "rock") {
-    if (computer ==="scissors") {
-      obj.str = `${rock} ${win}`;
-      obj.ner = "win";
-    }
-    else {
-      obj.str = `${paper} ${lose}`;
-      obj.ner = "lose";
-    }
-  }
-   else if (user === "paper") {
-     if (computer === "rock") {
-       obj.str = `${paper} ${win}`;
-       obj.ner = "win";
-     }
-     else {
-       obj.str = `${scissors} ${lose}`;
-       obj.ner = "lose";
-     }
-   }
-   else if (user === "scissors") {
-   	if (computer === "rock") {
-   		obj.str = `${rock} ${lose}`;
-   		obj.ner = "lose";
-   	}
-   	else {
-   		obj.str = `${scissors} ${win}`;
-   		obj.ner = "win";
-   	}
-   }
-
-   return obj;
-};

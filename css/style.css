@@ -1,35 +1,73 @@
 body {
-  font-family: 'Francois One', sans-serif;
-  text-align: center;
-  background-color: black;
+  margin-top: 100px;
+  background-color: maroon;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
 }
-.choice {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #999;
-  border-radius: 50%;
-  margin: 20px 30px 10px 30px;
-  background: rgb(255, 255, 255);
-  outline: none;
-  cursor: pointer;
+/* .jumbotron {
+} */
+
+button {
+  float: right;
 }
-i.fa {
-  font-size: 100px;
-  margin: 20px 0 0 0;
+i {
+  float: left;
+  font-size: 35px;
+  margin-right: 5px;
+  color: maroon;
 }
-h1 {
+
+.fa-quote-left {
+  font-size: 25px;
+  color: black;
+}
+
+.btn.btn-default {
+  height: 35px;
+  background-color: maroon;
   color: white;
-  margin: 2em 0 1em 0;
-  font-size: 40px;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+  border: 0;
 }
-h2 {
-  font-size: 20px;
+
+button:focus {
+  outline: 0 !important;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+a {
   color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.quote {
+  font-size: 3em;
+}
+
+.icons {
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+}
+
+.quote-box {
+  background-color: white;
 }
 
 .buttoncalc {
-
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -51,9 +89,8 @@ h2 {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase
-  
-  
 }
+
 .button:hover {
   border: 1px solid ##2953e3;
   background: #4fa0ff;
@@ -64,6 +101,7 @@ h2 {
   text-decoration: none;
   text-transform: uppercase
 }
+
 .button:active {
   background: #2347c1;
   background: -webkit-gradient(linear, left top, left bottom, from(#2347c1), to(#2347c1));
@@ -71,6 +109,7 @@ h2 {
   background: linear-gradient(to bottom, #2347c1, #2347c1);
   text-transform: uppercase
 }
+
 .button:focus {
   text-transform: uppercase
 }
