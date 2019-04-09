@@ -3,36 +3,75 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Random Quote Machine</title>
-  <script type="text/javascript" src="https://code.jquery.com/mobile/git/jquery.mobile-git.min.js"></script>  
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <title>Javascript Calculator</title>
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
   
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
       <link rel="stylesheet" href="css/style.css">
-
-  
 </head>
 
 <body>
 
-  <div class="container">
-  <div class="jumbotron">
-    <blockquote>
-      <i class="fas fa-quote-left"></i>
-      <p id="content" class="text-left"></p>
-      <footer id="title" class="text-right"></footer>
-    </blockquote>
-    <a href="#" target="_blank" id="twitter-link"><i class="fab fa-twitter-square icons"></i></a>
-    <button id="get-quote" class="btn btn-default">Get Quote</button>
-  </div>
-  <a href="https://github.com/harleyjane/randomquotes" class="buttoncalc" role="button">See Code</a>
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <div class='container'>
+  <div id='calculator'>
+    <div id='title' class='text-center'>
+      <h5><b>ELECTRONIC CALCULATOR</b></h5>
+    </div>
 
+
+    <div id='entrybox' class='text-right'>
+      <div id='entry'>
+        <p id='answer'>0</p>
+      </div>
+      <div id='history'>
+        <p>0</p>
+      </div>
+    </div>
+
+
+    <div id='buttons'>
+
+      <button class='red' value='ac'>AC</button>
+      <button class='red' value='ce'>CE</button>
+      <button value='/'>&divide;</button>
+      <button value='*'>x</button>
+
+      <button value='7'>7</button>
+      <button value='8'>8</button>
+      <button value='9'>9</button>
+      <button value='-'>-</button>
+
+      <button value='4'>4</button>
+      <button value='5'>5</button>
+      <button value='6'>6</button>
+      <button value='+'>+</button>
+
+
+      <button value='1'>1</button>
+      <button value='2'>2</button>
+      <button value='3'>3</button>
+      <button class='invisible'>N</button>
+
+      <button id='zeroButton' value='0'>0</button>
+      <button value='.'>.</button>
+      <button id='equalButton' value='='>=</button>
+    </div>
+    
+    <div id='tester'></div>
+  </div>
   
+</div>
+
+
+<div>
+<a href="https://github.com/harleyjane/calculator" class="buttoncalc" role="button">See Code</a>
+</div>
+
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 
     <script  src="js/index.js"></script>
 

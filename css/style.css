@@ -1,78 +1,126 @@
 body {
-  margin-top: 100px;
-  background-color: maroon;
-  -webkit-transition: 2s ease;
-  -moz-transition: 2s ease;
-  -ms-transition: 2s ease;
-  -o-transition: 2s ease;
+  font-family: 'Orbitron', sans-serif;
+  background-color: black;
 }
-/* .jumbotron {
-} */
+
+#calculator {
+  height: 410px;
+  width: 300px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #dfd8d0;
+  border: 2px solid #908b85;
+  border-radius: 20px;
+  box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.68), inset -1px -6px 12px 0.1px #89847e;
+}
+
+#title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ee0579;
+}
+
+#entrybox {
+  width: 85%;
+  height: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #b4b39d;
+  border-radius: 6px;
+  background-color: #c3c2ab;
+}
+
+#entry {
+  margin-right: 10px;
+  font-size: 35px;
+}
+
+#buttons {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  display: inline-block;
+  width: 280px;
+  height: auto;
+  margin-top: 15px;
+  margin-left: 15px;
+}
 
 button {
-  float: right;
-}
-i {
-  float: left;
-  font-size: 35px;
-  margin-right: 5px;
-  color: maroon;
-}
-
-.fa-quote-left {
-  font-size: 25px;
-  color: black;
+  border-radius: 8px;
+  border: none;
+  background-color: #3a3a3a;
+  margin: 0 4px 10px 8px;
+  height: 40px;
+  width: 50px;
+  box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
 }
 
-.btn.btn-default {
-  height: 35px;
-  background-color: maroon;
+button:active {
+  transform: translate(0px, 3px);
+  box-shadow: none;
+}
+
+.row {
+  margin-top: 20px
+}
+
+#topAdjust {
+  margin-top: -52px;
+}
+
+#equalButton {
+  position: absolute;
+  margin-left: 12px;
+  margin-top: -50px;
+  height: 90px;
+}
+
+#zeroButton {
+  width: 117px;
+}
+
+.red {
+  font-size: 14px;
+  background-color: #ee0579;
+  box-shadow: 0px 3px 0px 0px #ee0579;
+}
+
+
+button,
+button:hover,
+button:active,
+button:visited {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
   color: white;
-  -webkit-transition: 2s ease;
-  -moz-transition: 2s ease;
-  -ms-transition: 2s ease;
-  -o-transition: 2s ease;
-  border: 0;
+  text-decoration: none !important;
+  outline: none !important;
 }
 
-button:focus {
-  outline: 0 !important;
+#history {
+  /*transform: translate(-13px, -17px);*/
+  position: relative;
+  height: 10px;
+  bottom: 17px;
+  margin-right: 14px;
+  color: #8b8b7b;
+  font-size: 12px;
 }
-
-button:hover {
-  opacity: 0.8;
-}
-
-a {
-  color: white;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: white;
-}
-
-.quote {
-  font-size: 3em;
-}
-
-.icons {
-  -webkit-transition: 2s ease;
-  -moz-transition: 2s ease;
-  -ms-transition: 2s ease;
-  -o-transition: 2s ease;
-}
-
-.quote-box {
-  background-color: white;
-}
-
 .buttoncalc {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   position: absolute;
-  bottom: 5%;
+  bottom: 9%;
   left: 46%;
   padding: 9px 9px;
   border: 1px solid #2347c1;
@@ -86,7 +134,7 @@ a:hover {
   box-shadow: #4fa0ff -1px 0px 0px 0px;
   text-shadow: #152a72 1px 1px 1px;
   font: normal normal bold 11px verdana;
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   text-transform: uppercase
 }
@@ -111,5 +159,6 @@ a:hover {
 }
 
 .button:focus {
-  text-transform: uppercase
+  text-transform: uppercase;
+  color: white;
 }
